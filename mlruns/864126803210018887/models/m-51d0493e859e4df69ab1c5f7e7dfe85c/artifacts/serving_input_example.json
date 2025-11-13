@@ -1,0 +1,12 @@
+{
+  "dataframe_split": {
+    "columns": [
+      "question"
+    ],
+    "data": [
+      [
+        "What is the purpose of this system?"
+      ]
+    ]
+  }
+}

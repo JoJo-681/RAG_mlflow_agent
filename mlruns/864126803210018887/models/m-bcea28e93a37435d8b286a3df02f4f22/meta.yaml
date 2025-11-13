@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/joshu/Documents/GPT_result/test_project/mlruns/864126803210018887/models/m-bcea28e93a37435d8b286a3df02f4f22/artifacts
+creation_timestamp: 1762868972471
+experiment_id: '864126803210018887'
+last_updated_timestamp: 1762868992036
+model_id: m-bcea28e93a37435d8b286a3df02f4f22
+model_type: null
+name: rag_agent
+source_run_id: 6178bda210bc402090e734dafea41c47
+status: 2
+status_message: null

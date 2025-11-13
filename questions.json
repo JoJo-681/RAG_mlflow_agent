@@ -1,0 +1,10 @@
+{
+  "dataframe_split": {
+    "columns": ["query"],
+    "data": [
+      ["What is the maximum operating temperature for the ECU-750?"],
+      ["How do you enable the NPU on the ECU-850b?"],
+      ["Which ECU can operate in the harshest temperature conditions?"]
+    ]
+  }
+}

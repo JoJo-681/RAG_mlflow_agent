@@ -1,0 +1,32 @@
+artifact_path: file:///C:/Users/joshu/Documents/GPT_result/test_project/mlruns/864126803210018887/models/m-f24a288e4cf5425a8ee4a966a51a38ac/artifacts
+flavors:
+  python_function:
+    cloudpickle_version: 3.1.2
+    code: null
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.pyfunc.model
+    python_model: python_model.pkl
+    python_version: 3.11.14
+    streamable: false
+is_signature_from_type_hint: false
+mlflow_version: 3.5.1
+model_id: m-f24a288e4cf5425a8ee4a966a51a38ac
+model_size_bytes: 1222
+model_uuid: m-f24a288e4cf5425a8ee4a966a51a38ac
+prompts: null
+run_id: 96bfc22b76f94c129da77208b2c2fae7
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "string", "name": "query", "required": true}]'
+  outputs: '[{"type": "string", "name": "query", "required": true}, {"type": "string",
+    "name": "answer", "required": true}, {"type": "long", "name": "source_documents_count",
+    "required": true}, {"type": "string", "name": "status", "required": true}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-11-11 13:51:21.390818'

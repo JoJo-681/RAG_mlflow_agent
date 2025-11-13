@@ -1,0 +1,8 @@
+artifact_location: mlflow-artifacts:/976493669752834996
+creation_time: 1762952752127
+experiment_id: '976493669752834996'
+last_update_time: 1762958346385
+lifecycle_stage: deleted
+name: test_experiment
+tags:
+  mlflow.experimentKind: genai_development

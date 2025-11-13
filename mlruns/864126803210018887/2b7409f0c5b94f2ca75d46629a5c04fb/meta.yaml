@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/joshu/Documents/GPT_result/test_project/mlruns/864126803210018887/2b7409f0c5b94f2ca75d46629a5c04fb/artifacts
+end_time: 1762864868186
+entry_point_name: ''
+experiment_id: '864126803210018887'
+lifecycle_stage: active
+run_id: 2b7409f0c5b94f2ca75d46629a5c04fb
+run_name: rag_agent_deployment
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762864861905
+status: 4
+tags: []
+user_id: joshu

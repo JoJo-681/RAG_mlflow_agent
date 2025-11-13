@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/976493669752834996/db2e8b4a60de4259971fb542c1d7a025/artifacts
+deleted_time: 1762958346385
+end_time: 1762952752324
+entry_point_name: ''
+experiment_id: '976493669752834996'
+lifecycle_stage: deleted
+run_id: db2e8b4a60de4259971fb542c1d7a025
+run_name: bustling-shrimp-209
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762952752227
+status: 3
+tags: []
+user_id: joshu
