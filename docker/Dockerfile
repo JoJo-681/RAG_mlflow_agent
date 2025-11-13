@@ -32,6 +32,7 @@ COPY init_vector_db.py mlflow_run.py mlflow_start.py mlflow_deploy.py ./
 COPY test_questions_script.py test_single_query.py ./ 
 COPY test-questions.csv questions.json ./
 COPY .env.example ./
+COPY .env ./
 
 # Create directories
 RUN mkdir -p artifacts/chroma_index
@@ -39,4 +40,5 @@ RUN mkdir -p artifacts/chroma_index
 EXPOSE 5000
 EXPOSE 5001
 
-CMD ["mlflow", "server", "--host", "0.0.0.0", "--port", "5000", "--backend-store-uri", "sqlite:///mlflow.db", "--default-artifact-root", "./mlruns"]
+# CMD ["mlflow", "server", "--host", "0.0.0.0", "--port", "5000", "--backend-store-uri", "sqlite:///mlflow.db", "--default-artifact-root", "./mlruns"]
+CMD [ "python", "mlflow_run.py" ]

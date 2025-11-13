@@ -24,6 +24,7 @@ def main():
     print("Logging RAG model to MLflow...")
     try:
         run_id = log_rag_model_with_retriever("rag_agent")
+        os.system(f"mlflow models serve --model-uri runs:/{run_id}/rag_agent --port 5000 --host 0.0.0.0 --env-manager local")
         print(f"Model logged successfully! Run ID: {run_id}")
         print("View in MLflow UI: http://localhost:5000")
         print(f"Model URI: runs:/{run_id}/rag_agent")

@@ -123,29 +123,50 @@ This project implements a comprehensive RAG system that combines document retrie
 .
 ├── src/                       # Source code
 │   ├── rag/                   # RAG implementation
+│   │   ├── __init__.py
 │   │   ├── graph.py           # LangGraph workflow
 │   │   ├── retriever.py       # ChromaDB retriever
 │   │   └── chain.py           # LangChain RAG chain
 │   ├── models/                # Data models
+│   │   ├── __init__.py
 │   │   ├── schemas.py         # Pydantic schemas
 │   │   └── mlflow_rag_model.py # MLflow model wrapper
 │   ├── llm/                   # LLM clients
+│   │   ├── __init__.py
 │   │   └── openai_client.py   # DeepSeek client
 │   ├── utils/                 # Utilities
+│   │   ├── __init__.py
 │   │   └── mlflow_tracker.py  # MLflow tracking utilities
 │   └── config.py              # Configuration management
 ├── data/                      # Document storage
 │   ├── ECU-700_Series_Manual.md
 │   ├── ECU-800_Series_Base.md
 │   └── ECU-800_Series_Plus.md
-├── scripts/                   # Deployment scripts
-│   └── deploy_model.py
 ├── docker/                    # Docker configuration
 │   └── Dockerfile
-├── docker-compose.yml         # Docker Compose
-├── pyproject.toml            # Poetry dependencies
-├── .env.example              # Environment template
-└── *.py                      # Main scripts
+├── artifacts/                 # Vector database and model artifacts
+│   └── chroma_index/          # ChromaDB vector store
+├── mlruns/                    # MLflow experiment tracking
+├── mlflow.db/                 # MLflow database
+├── docker-compose.yml         # Docker Compose configuration
+├── pyproject.toml            # Poetry dependencies and project config
+├── .env.example              # Environment variables template
+├── .env                      # Environment variables (user created)
+├── .dockerignore             # Docker ignore patterns
+├── init_vector_db.py         # Initialize vector database
+├── mlflow_start.py           # Start MLflow tracking server
+├── mlflow_run.py             # Train and log model to MLflow
+├── mlflow_deploy.py          # Deploy model service
+├── test_single_query.py      # Single query testing
+├── test_questions_script.py  # Batch testing script
+├── test_mlflow_integration.py # MLflow integration testing
+├── check_mlflow_version.py   # MLflow version compatibility check
+├── questions.json            # Test questions for batch testing
+├── test-questions.csv        # CSV test questions
+├── test_results.csv          # Test results output
+└── README.md                 # Project documentation
+
+
 ```
 
 ## Installation

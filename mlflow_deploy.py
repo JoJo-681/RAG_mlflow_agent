@@ -176,6 +176,20 @@ def test_model_api(port=5001):
 
 def main():
     """Main deployment function. / 主要部署函数"""
+    import argparse
+    
+    parser = argparse.ArgumentParser(description="Deploy RAG model using MLflow")
+    parser.add_argument("--model-name", default="rag_agent_deployed", help="Name of the model")
+    parser.add_argument("--port", type=int, default=5001, help="Port for MLflow model server")
+    parser.add_argument("--test-only", action="store_true", help="Only test existing server")
+    
+    args = parser.parse_args()
+
+    if args.test_only:
+        print("Testing existing model server...")
+        test_model_api(args.port)
+        return
+
     print("=" * 60)
     print("MLflow RAG Model Deployment")
     print("=" * 60)
@@ -188,7 +202,7 @@ def main():
     model_uri = deploy_rag_model()
 
     # Step 3: Start MLflow model serving / 步骤3: 启动MLflow模型服务
-    serving_process, serving_port = start_mlflow_model_serving(model_uri, port=5001)
+    serving_process, serving_port = start_mlflow_model_serving(model_uri, port=args.port)
 
     if serving_process:
         print("\n" + "=" * 60)
@@ -197,6 +211,7 @@ def main():
         print(f"MLflow UI: http://localhost:5000")
         print(f"Model API: http://localhost:{serving_port}")
         print(f"Model URI: {model_uri}")
+        print(f"Model Name: {args.model_name}")
         print("\nUsage Examples:")
         print("1. View experiments in browser: http://localhost:5000")
         print("2. Test API with curl:")
